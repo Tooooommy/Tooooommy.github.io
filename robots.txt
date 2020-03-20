@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://tooooommy.github.io/sitemap.xml
