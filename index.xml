@@ -7,10 +7,84 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>@Tooooommy</copyright>
-    <lastBuildDate>Sun, 28 Sep 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Mar 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://tooooommy.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Systemd</title>
+      <link>https://tooooommy.github.io/post/systemd-20200322/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tooooommy.github.io/post/systemd-20200322/</guid>
+      
+        <description>&lt;h2 id=&#34;导言&#34;&gt;导言&lt;/h2&gt;
+&lt;p&gt;守护进程就是一直在后台运行的进程。&lt;/p&gt;
+&lt;h2 id=&#34;systemd&#34;&gt;Systemd&lt;/h2&gt;
+&lt;p&gt;Systemd 是linux系统工具，用来启动守护进程的。&lt;/p&gt;
+&lt;p&gt;systemctl 是Systemd的主命令，用于管理系统。&lt;/p&gt;
+&lt;p&gt;systemd-analyze 命令用于查看启动耗时&lt;/p&gt;
+&lt;p&gt;hostnamectl 命令用于查看当前主机的信息&lt;/p&gt;
+&lt;p&gt;localectl 命令用于查看本地化设置&lt;/p&gt;
+&lt;p&gt;timedatectl 命令用于查看当前时区设置&lt;/p&gt;
+&lt;p&gt;loginctl 命令用于查看当前登录的用户&lt;/p&gt;
+&lt;p&gt;journalctl 查看所有内核和应用的日志&lt;/p&gt;
+&lt;h3 id=&#34;配置&#34;&gt;配置&lt;/h3&gt;
+&lt;p&gt;#系统服务，开机不需要登录就能运行的程序（可以用于开机自启）&lt;/p&gt;
+&lt;p&gt;/usr/lib/systemd/system&lt;/p&gt;
+&lt;p&gt;#用户服务，需要登录后才能运行程序&lt;/p&gt;
+&lt;p&gt;/usr/lib/systemd/user&lt;/p&gt;
+&lt;p&gt;服务脚本一般以xxx.service命名, 三部分[Unit] [Service] [Install]&lt;/p&gt;
+&lt;h3 id=&#34;案例&#34;&gt;案例&lt;/h3&gt;
+&lt;p&gt;假设我有个一下web程序需要加入自启动&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[Unit]
+Description=demo
+After=network.target
+Before=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/demo
+ExecReload=/bin/kill -s HUP $MAINPID
+TimeoutSec=0
+Restart=always
+StartLimitBurst=3
+StartLimitInterval=120s
+
+[Install]
+wantedBy=multi-user.target
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;unit-单元&#34;&gt;Unit 单元&lt;/h3&gt;
+&lt;p&gt;Description: 当前服务描述&lt;/p&gt;
+&lt;p&gt;After: 在服务前启动&lt;/p&gt;
+&lt;p&gt;Before: 在服务后启动&lt;/p&gt;
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+&lt;h3 id=&#34;service&#34;&gt;Service&lt;/h3&gt;
+&lt;p&gt;Type: 启动类型&lt;/p&gt;
+&lt;p&gt;ExecStart: 启动命令&lt;/p&gt;
+&lt;p&gt;ExecReload: 重启命令&lt;/p&gt;
+&lt;p&gt;TimeoutSec: 超时命令&lt;/p&gt;
+&lt;p&gt;Restart: 启动设置&lt;/p&gt;
+&lt;p&gt;StartLimitBurst: 限制启动频率&lt;/p&gt;
+&lt;p&gt;StartLimitInterval:  与上面一起限制启动频率&lt;/p&gt;
+&lt;h3 id=&#34;install&#34;&gt;Install&lt;/h3&gt;
+&lt;p&gt;wantedBy 加入那个target&lt;/p&gt;
+&lt;h2 id=&#34;引用&#34;&gt;引用&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-commands.html&#34;&gt;@Systemd 入门教程：命令篇&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.ruanyifeng.com/blog/2016/02/linux-daemon.html&#34;&gt;@Linux 守护进程的启动方法&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.jinbuguo.com/systemd/systemd.service.html&#34;&gt;@systemd.service 中文手册&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/yuanfangPOET/article/details/89410312?depth_1-utm_source=distribute.pc_relevant.none-task&amp;amp;utm_source=distribute.pc_relevant.none-task&#34;&gt;@CentOS7编写systemd服务脚本&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+      
+    </item>
     
     <item>
       <title>Creating a New Theme</title>

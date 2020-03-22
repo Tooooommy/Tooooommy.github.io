@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on Tooooommy&#39;s blog</title>
+    <link>https://tooooommy.github.io/tags/linux/</link>
+    <description>Recent content in linux on Tooooommy&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>@Tooooommy</copyright>
+    <lastBuildDate>Sun, 22 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://tooooommy.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Systemd</title>
+      <link>https://tooooommy.github.io/post/systemd-20200322/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tooooommy.github.io/post/systemd-20200322/</guid>
+      <description>导言 守护进程就是一直在后台运行的进程。 Systemd Systemd 是linux系统工具，用来启动守护进程的。 systemctl 是Systemd的主命令，用于管理系统。 systemd-analyze 命令用于查看</description>
+    </item>
+    
+  </channel>
+</rss>
