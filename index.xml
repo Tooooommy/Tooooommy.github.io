@@ -13,6 +13,41 @@
     
     
     <item>
+      <title>linux 每天一个命令 sed</title>
+      <link>https://tooooommy.github.io/post/sed-20200324/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tooooommy.github.io/post/sed-20200324/</guid>
+      
+        <description>&lt;h2 id=&#34;导言&#34;&gt;导言&lt;/h2&gt;
+&lt;p&gt;linux 每天一个命令 sed。&lt;/p&gt;
+&lt;p&gt;sed 命令是利用脚本来处理文本文件, 特别是行。&lt;/p&gt;
+&lt;h2 id=&#34;sed&#34;&gt;Sed&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;sed [-hnV][-e&amp;lt;script&amp;gt;][-f&amp;lt;script文件&amp;gt;][文本文件] &lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;参数&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;-h &amp;ndash;help 显示帮助信息&lt;/li&gt;
+&lt;li&gt;-n &amp;ndash;quiet/&amp;ndash;slient 显示script处理后的结果&lt;/li&gt;
+&lt;li&gt;-V &amp;ndash;version 显示版本信息&lt;/li&gt;
+&lt;li&gt;-e &amp;ndash;expression=script 制定script处理文本文件&lt;/li&gt;
+&lt;li&gt;-f &amp;ndash;file=script文件 制定处理的文本的脚本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;动作&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a 新增 &lt;code&gt;sed -e 4a\newline test.sh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;c 取代 &lt;code&gt;sed -e 4c\newline test.sh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;d 删除 &lt;code&gt;sed -e 4d test.sh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;i 插入 &lt;code&gt;sed -e 4i\newline test.sh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;p 打印 &lt;code&gt;sed -n 4p test.sh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;s 取代 &lt;code&gt;sed &#39;s/要被取代的字串/新的字串/g&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>Systemd</title>
       <link>https://tooooommy.github.io/post/systemd-20200322/</link>
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>

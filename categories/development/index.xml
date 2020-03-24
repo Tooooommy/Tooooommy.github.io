@@ -13,6 +13,15 @@
     
     
     <item>
+      <title>linux 每天一个命令 sed</title>
+      <link>https://tooooommy.github.io/post/sed-20200324/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tooooommy.github.io/post/sed-20200324/</guid>
+      <description>导言 linux 每天一个命令 sed。 sed 命令是利用脚本来处理文本文件, 特别是行。 Sed sed [-hnV][-e&amp;lt;script&amp;gt;][-f&amp;lt;scr</description>
+    </item>
+    
+    <item>
       <title>Systemd</title>
       <link>https://tooooommy.github.io/post/systemd-20200322/</link>
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
