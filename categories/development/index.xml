@@ -7,15 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>@Tooooommy</copyright>
-    <lastBuildDate>Sun, 22 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tooooommy.github.io/categories/development/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>im 学习和收集</title>
+      <link>https://tooooommy.github.io/post/imlink-20200324/</link>
+      <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tooooommy.github.io/post/imlink-20200324/</guid>
+      <description>im概括 新手入门一篇就够：从零开发移动端IM 序列号 去重 离线 心跳 IM消息ID技术专题(三)：解密融云IM产品的聊天消息ID生成策略 分布式唯一i</description>
+    </item>
+    
+    <item>
       <title>linux 每天一个命令 sed</title>
       <link>https://tooooommy.github.io/post/sed-20200324/</link>
-      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://tooooommy.github.io/post/sed-20200324/</guid>
       <description>导言 linux 每天一个命令 sed。 sed 命令是利用脚本来处理文本文件, 特别是行。 Sed sed [-hnV][-e&amp;lt;script&amp;gt;][-f&amp;lt;scr</description>
