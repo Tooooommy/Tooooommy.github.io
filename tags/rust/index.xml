@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rust on Tooooommy&#39;s blog</title>
+    <link>https://tooooommy.github.io/tags/rust/</link>
+    <description>Recent content in rust on Tooooommy&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>@Tooooommy</copyright>
+    <lastBuildDate>Mon, 06 Jul 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://tooooommy.github.io/tags/rust/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>rust - 切片</title>
+      <link>https://tooooommy.github.io/post/rust-08-20200706/</link>
+      <pubDate>Mon, 06 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tooooommy.github.io/post/rust-08-20200706/</guid>
+      <description>slice fn _slice() { let s = String::from(&amp;#34;string&amp;#34;); let p1 = &amp;amp;s[0..4]; let p2 = &amp;amp;s[4..s.len()]; println!(&amp;#34;{}-{}-{}&amp;#34;, s, p1, p2); let a: [i32; 3] = [1, 2, 3]; let a1 = &amp;amp;a[1..3]; println!(&amp;#34;{}&amp;#34;, a1[0]); } slice: s[n..M] n/m 可以忽略代表全部, 不可超出s的长度.</description>
+    </item>
+    
+    <item>
+      <title>rust - 结构</title>
+      <link>https://tooooommy.github.io/post/rust-09-20200706/</link>
+      <pubDate>Mon, 06 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tooooommy.github.io/post/rust-09-20200706/</guid>
+      <description>struct fn _struct() { struct People { // 定义struct name: String, age: i64 } let p1 = People{ // 声明赋值struct name: String::from(&amp;#34;hello&amp;#34;), age: 18 }; println!(&amp;#34;{}-{}&amp;#34;, p1.name, p1.age); // 访问struct let name = String::from(&amp;#34;world&amp;#34;); let p2 = People{ name, // 现有字段赋值 ..p1</description>
+    </item>
+    
+    <item>
+      <title>rust - 函数</title>
+      <link>https://tooooommy.github.io/post/rust-04-20200705/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tooooommy.github.io/post/rust-04-20200705/</guid>
+      <description>fn fn _fn(a: usize, b:String) -&amp;gt; String { b.repeat(a) } fn: 定义声明关键字. _fn: 函数名字 (a:usize, b:String): 函数参数 -&amp;gt; String: 返回值. b.repeat(a): 不加符号;被当做返回值。 也可以return b.repeat(a)</description>
+    </item>
+    
+    <item>
+      <title>rust - 所有权</title>
+      <link>https://tooooommy.github.io/post/rust-07-20200705/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tooooommy.github.io/post/rust-07-20200705/</guid>
+      <description>rule Rust中的每个值都有一个变量, 称为其所有者. 一次只能有一个所有者. 当所有者不在程序运行范围时, 该值将被删除. 三条规则是所有权的基础. fn ownership1()</description>
+    </item>
+    
+    <item>
+      <title>rust - 注释</title>
+      <link>https://tooooommy.github.io/post/rust-05-20200705/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tooooommy.github.io/post/rust-05-20200705/</guid>
+      <description>comment /// Adds one to the number given: /// /// # Examples /// /// ``` /// let x = _comment(1, 2); /// /// ``` /* @param a i32 @param b i32 @return a+b */ fn _comment(a: i32, b:i32) -&amp;gt;i32 { // a+b 并返回 a+b } // 单行注释 /**/ 多行注释 /// 文档注释 -&amp;gt; 可以配合car</description>
+    </item>
+    
+    <item>
+      <title>rust - 世界之初</title>
+      <link>https://tooooommy.github.io/post/rust-02-20200704/</link>
+      <pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tooooommy.github.io/post/rust-02-20200704/</guid>
+      <description>hello world fn main() { println!(&amp;#34;{} world&amp;#34;, &amp;#34;hello&amp;#34;); } fn: 声明函数. println!: 宏, 打印输出 {} 代表占用符 main: 入口函数</description>
+    </item>
+    
+    <item>
+      <title>rust - 控制流程</title>
+      <link>https://tooooommy.github.io/post/rust-06-20200705/</link>
+      <pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tooooommy.github.io/post/rust-06-20200705/</guid>
+      <description>if fn _if() { let a = false; let b = true; if a { println!(&amp;#34;a==true&amp;#34;) } else if b { println!(&amp;#34;b==true&amp;#34;) } else { println!(&amp;#34;other==true&amp;#34;) } let a = if a { false } else { true }; println!(&amp;#34;{}&amp;#34;, a) } if/else if/ else 判断 let if: 赋值判断 loop fn _loop() { let mut a = 100; loop { a = a-1; if a ==</description>
+    </item>
+    
+    <item>
+      <title>rust - 类型</title>
+      <link>https://tooooommy.github.io/post/rust-03-20200704/</link>
+      <pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tooooommy.github.io/post/rust-03-20200704/</guid>
+      <description>let fn types() { let x = 4; let y = &amp;#34;string&amp;#34;; println!(&amp;#34;{}&amp;#34;, x); println!(&amp;#34;{}&amp;#34;, y); } let: 用于声明类型赋值 mut fn _mut() { let mut x = 4; x = 5; println!(&amp;#34;{}&amp;#34;, x); let y = 5; // y = 5; println!(&amp;#34;{}&amp;#34;, y) } error: ^^^^^ cannot assign twice to immutable variable mut: 代表这个变量的可变性</description>
+    </item>
+    
+    <item>
+      <title>学习rust</title>
+      <link>https://tooooommy.github.io/post/rust-01-20200704/</link>
+      <pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tooooommy.github.io/post/rust-01-20200704/</guid>
+      <description>为什么 从众心理， 想学就学。 目标 世界之初 类型 函数 注释 流程 所有权 切片 结构 特征 迭代 枚举 集合 错误 泛型 生命周期 测试 智能指针 模块 待续 总结 努力不一定成功 不</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>@Tooooommy</copyright>
-    <lastBuildDate>Wed, 25 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tooooommy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>rust</title>
+      <link>https://tooooommy.github.io/tags/rust/</link>
+      <pubDate>Mon, 06 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tooooommy.github.io/tags/rust/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>poem</title>
@@ -45,24 +54,6 @@
       <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://tooooommy.github.io/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>go</title>
-      <link>https://tooooommy.github.io/tags/go/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://tooooommy.github.io/tags/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>golang</title>
-      <link>https://tooooommy.github.io/tags/golang/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://tooooommy.github.io/tags/golang/</guid>
       <description></description>
     </item>
     

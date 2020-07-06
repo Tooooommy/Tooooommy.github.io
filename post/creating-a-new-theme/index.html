@@ -33,7 +33,7 @@ We&amp;rsquo;ll start with creating a new site with a very basic template." />
 
 
 
-<meta name="generator" content="Hugo 0.66.0" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://tooooommy.github.io/post/creating-a-new-theme/" />
@@ -76,7 +76,7 @@ We&rsquo;ll start with creating a new site with a very basic template.">
 
 
 
-<meta itemprop="keywords" content="go,golang,templates,themes,development," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="templates,themes," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Creating a New Theme"/>
 <meta name="twitter:description" content="Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&rsquo;t cover using CSS to style your theme.
 We&rsquo;ll start with creating a new site with a very basic template."/>
@@ -288,9 +288,7 @@ We&rsquo;ll start with creating a new site with a very basic template."/>
           2014-09-28
         </time>
         <div class="post-category">
-            <a href="https://tooooommy.github.io/categories/development/"> Development </a>
-            <a href="https://tooooommy.github.io/categories/golang/"> golang </a>
-            <a href="https://tooooommy.github.io/categories/index/"> index </a>
+            <a href="https://tooooommy.github.io/categories/theme/"> Theme </a>
             
           </div>
         
@@ -843,7 +841,7 @@ $
 :wq
 
 $
-</code></pre><p>Hugo uses the Go template engine. That engine scans the template files for commands which are enclosed between &ldquo;{{&rdquo; and &ldquo;}}&quot;. In our template, the commands are:</p>
+</code></pre><p>Hugo uses the Go template engine. That engine scans the template files for commands which are enclosed between &ldquo;{{&rdquo; and &ldquo;}}&rdquo;. In our template, the commands are:</p>
 <ol>
 <li>range</li>
 <li>.Title</li>
@@ -1031,7 +1029,7 @@ i'm speechless
 -rw-rw-r--  1 mdhender  staff   358 Sep 27 15:08 public/post/first-post/index.html
 -rw-rw-r--  1 mdhender  staff     0 Sep 27 15:08 public/post/index.html
 -rw-rw-r--  1 mdhender  staff   342 Sep 27 15:08 public/post/second-post/index.html
-</code></pre><p>Notice that the page wasn&rsquo;t created at the top level. It was created in a sub-directory named &lsquo;about-time/'. That name came from our slug. Hugo will use the slug to name the generated content. It&rsquo;s a reasonable default, by the way, but we can learn a few things by fighting it for this file.</p>
+</code></pre><p>Notice that the page wasn&rsquo;t created at the top level. It was created in a sub-directory named &lsquo;about-time/&rsquo;. That name came from our slug. Hugo will use the slug to name the generated content. It&rsquo;s a reasonable default, by the way, but we can learn a few things by fighting it for this file.</p>
 <p>One other thing. Take a look at the home page.</p>
 <pre><code>$ cat public/index.html
 &lt;!DOCTYPE html&gt;
@@ -1209,11 +1207,8 @@ $ vi themes/zafta/layouts/_default/single.html
 
     <footer class="post-footer">
       <div class="post-tags">
-          <a href="https://tooooommy.github.io/tags/go/">go</a>
-          <a href="https://tooooommy.github.io/tags/golang/">golang</a>
           <a href="https://tooooommy.github.io/tags/templates/">templates</a>
           <a href="https://tooooommy.github.io/tags/themes/">themes</a>
-          <a href="https://tooooommy.github.io/tags/development/">development</a>
           
         </div>
 
@@ -1230,7 +1225,7 @@ $ vi themes/zafta/layouts/_default/single.html
 </svg>
 
             </i>
-            <span class="prev-text nav-default">Systemd</span>
+            <span class="prev-text nav-default">linux命令 Systemd</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
         

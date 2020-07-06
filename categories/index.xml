@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>@Tooooommy</copyright>
-    <lastBuildDate>Wed, 25 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tooooommy.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Rust</title>
+      <link>https://tooooommy.github.io/categories/rust/</link>
+      <pubDate>Mon, 06 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tooooommy.github.io/categories/rust/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Poem</title>
@@ -18,15 +27,6 @@
       <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://tooooommy.github.io/categories/poem/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Development</title>
-      <link>https://tooooommy.github.io/categories/development/</link>
-      <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://tooooommy.github.io/categories/development/</guid>
       <description></description>
     </item>
     
@@ -49,20 +49,11 @@
     </item>
     
     <item>
-      <title>golang</title>
-      <link>https://tooooommy.github.io/categories/golang/</link>
+      <title>Theme</title>
+      <link>https://tooooommy.github.io/categories/theme/</link>
       <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://tooooommy.github.io/categories/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>index</title>
-      <link>https://tooooommy.github.io/categories/index/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://tooooommy.github.io/categories/index/</guid>
+      <guid>https://tooooommy.github.io/categories/theme/</guid>
       <description></description>
     </item>
     

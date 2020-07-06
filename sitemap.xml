@@ -3,7 +3,105 @@
   
   <url>
     <loc>https://tooooommy.github.io/categories/</loc>
-    <lastmod>2020-03-25T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tooooommy.github.io/post/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tooooommy.github.io/categories/rust/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tooooommy.github.io/tags/rust/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tooooommy.github.io/post/rust-08-20200706/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tooooommy.github.io/post/rust-09-20200706/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tooooommy.github.io/tags/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tooooommy.github.io/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tooooommy.github.io/post/rust-04-20200705/</loc>
+    <lastmod>2020-07-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tooooommy.github.io/post/rust-07-20200705/</loc>
+    <lastmod>2020-07-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tooooommy.github.io/post/rust-05-20200705/</loc>
+    <lastmod>2020-07-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tooooommy.github.io/post/rust-02-20200704/</loc>
+    <lastmod>2020-07-04T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tooooommy.github.io/post/rust-06-20200705/</loc>
+    <lastmod>2020-07-04T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tooooommy.github.io/post/rust-03-20200704/</loc>
+    <lastmod>2020-07-04T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tooooommy.github.io/post/rust-01-20200704/</loc>
+    <lastmod>2020-07-04T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -23,36 +121,8 @@
   </url>
   
   <url>
-    <loc>https://tooooommy.github.io/post/</loc>
+    <loc>https://tooooommy.github.io/post/poem-20200325/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://tooooommy.github.io/tags/</loc>
-    <lastmod>2020-03-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://tooooommy.github.io/</loc>
-    <lastmod>2020-03-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://tooooommy.github.io/post/poem20200325/</loc>
-    <lastmod>2020-03-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://tooooommy.github.io/categories/development/</loc>
-    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -121,35 +191,14 @@
   </url>
   
   <url>
-    <loc>https://tooooommy.github.io/tags/go/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://tooooommy.github.io/tags/golang/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://tooooommy.github.io/categories/golang/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://tooooommy.github.io/categories/index/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://tooooommy.github.io/tags/templates/</loc>
+    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tooooommy.github.io/categories/theme/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

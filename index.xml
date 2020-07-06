@@ -7,17 +7,585 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>@Tooooommy</copyright>
-    <lastBuildDate>Wed, 25 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jul 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://tooooommy.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>rust - 切片</title>
+      <link>https://tooooommy.github.io/post/rust-08-20200706/</link>
+      <pubDate>Mon, 06 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tooooommy.github.io/post/rust-08-20200706/</guid>
+      
+        <description>&lt;h2 id=&#34;slice&#34;&gt;slice&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;_slice&lt;/span&gt;() {
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; s &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; String::from(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; p1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;s[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;..&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;];
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; p2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;s[&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;..s.len()];
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}-{}-{}&amp;#34;&lt;/span&gt;, s, p1, p2);
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; a: [&lt;span style=&#34;color:#66d9ef&#34;&gt;i32&lt;/span&gt;; &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;];
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; a1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;a[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;..&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;];
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}&amp;#34;&lt;/span&gt;, a1[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;slice: s[n..M]  n/m 可以忽略代表全部, 不可超出s的长度.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>rust - 结构</title>
+      <link>https://tooooommy.github.io/post/rust-09-20200706/</link>
+      <pubDate>Mon, 06 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tooooommy.github.io/post/rust-09-20200706/</guid>
+      
+        <description>&lt;h2 id=&#34;struct&#34;&gt;struct&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;_struct&lt;/span&gt;()  {
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;struct&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;People&lt;/span&gt; { &lt;span style=&#34;color:#75715e&#34;&gt;// 定义struct
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        name: String,
+        age: &lt;span style=&#34;color:#66d9ef&#34;&gt;i64&lt;/span&gt;
+    }
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; p1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; People{ &lt;span style=&#34;color:#75715e&#34;&gt;// 声明赋值struct
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        name: String::from(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;hello&amp;#34;&lt;/span&gt;),
+        age: &lt;span style=&#34;color:#ae81ff&#34;&gt;18&lt;/span&gt;
+    };
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}-{}&amp;#34;&lt;/span&gt;, p1.name, p1.age);  &lt;span style=&#34;color:#75715e&#34;&gt;// 访问struct
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; name &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; String::from(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;world&amp;#34;&lt;/span&gt;);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; p2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; People{
+        name, &lt;span style=&#34;color:#75715e&#34;&gt;// 现有字段赋值
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        ..p1  &lt;span style=&#34;color:#75715e&#34;&gt;// 现有结构解构赋值
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    };
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}-{}&amp;#34;&lt;/span&gt;, p2.name, p2.age); &lt;span style=&#34;color:#75715e&#34;&gt;// 访问正常
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;struct&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Color&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;u8&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;u8&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;u8&lt;/span&gt;);    &lt;span style=&#34;color:#75715e&#34;&gt;// 元组类型struct
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;struct&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Point&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;f64&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;f64&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;f64&lt;/span&gt;);
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; black &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Color(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; origin &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Point(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.0&lt;/span&gt;);
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}-{}-{}&amp;#34;&lt;/span&gt;, black.&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, black.&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, black.&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;);   &lt;span style=&#34;color:#75715e&#34;&gt;// 元组类型struct 访问
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}-{}-{}&amp;#34;&lt;/span&gt;, origin.&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, origin.&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, origin.&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;); 
+
+    &lt;span style=&#34;color:#75715e&#34;&gt;#[derive(Debug)]&lt;/span&gt;   &lt;span style=&#34;color:#75715e&#34;&gt;// 定义Debug
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;struct&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Student&lt;/span&gt; {
+        name: String,
+        age: &lt;span style=&#34;color:#66d9ef&#34;&gt;u32&lt;/span&gt;,
+    }
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; stu &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Student{
+        name: String::from(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;hello&amp;#34;&lt;/span&gt;),
+        age: &lt;span style=&#34;color:#ae81ff&#34;&gt;27&lt;/span&gt;
+    };
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{:?}&amp;#34;&lt;/span&gt;, stu);  &lt;span style=&#34;color:#75715e&#34;&gt;// 输出结构
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;impl&lt;/span&gt; Student {   &lt;span style=&#34;color:#75715e&#34;&gt;// 同名关联函数
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;intro&lt;/span&gt;(&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;self) {  &lt;span style=&#34;color:#75715e&#34;&gt;// self 相当于this
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}-{}&amp;#34;&lt;/span&gt;, self.name, self.age);
+        }
+    }
+    stu.intro();  &lt;span style=&#34;color:#75715e&#34;&gt;// 结构体访问
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;impl&lt;/span&gt; Student {   &lt;span style=&#34;color:#75715e&#34;&gt;// 增加关联函数，结构体 impl 块可以写几次，效果相当于它们内容的拼接！
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;call&lt;/span&gt;(&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;self, s: &lt;span style=&#34;color:#a6e22e&#34;&gt;Student&lt;/span&gt;) {
+            println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{} call {}&amp;#34;&lt;/span&gt;, self.name, s.name);
+        }
+
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;new&lt;/span&gt;(name: String, age:&lt;span style=&#34;color:#66d9ef&#34;&gt;u32&lt;/span&gt;) -&amp;gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Student&lt;/span&gt; {  &lt;span style=&#34;color:#75715e&#34;&gt;// 相当于静态函数
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            Student{name, age}
+        }
+    }
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; stu1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Student{
+        name: String::from(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;tommy&amp;#34;&lt;/span&gt;),
+        age: &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;,
+    };
+    stu1.intro();
+    stu.call(stu1);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; stu2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Student::new(String::from(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;andy&amp;#34;&lt;/span&gt;), &lt;span style=&#34;color:#ae81ff&#34;&gt;12&lt;/span&gt;);
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{:#?}&amp;#34;&lt;/span&gt;, stu2);  &lt;span style=&#34;color:#75715e&#34;&gt;// 更漂亮的输出
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;struct&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Unit&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;// 单元结构体，可以定义symbol
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>rust - 函数</title>
+      <link>https://tooooommy.github.io/post/rust-04-20200705/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tooooommy.github.io/post/rust-04-20200705/</guid>
+      
+        <description>&lt;h2 id=&#34;fn&#34;&gt;fn&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;_fn&lt;/span&gt;(a: &lt;span style=&#34;color:#66d9ef&#34;&gt;usize&lt;/span&gt;, b:String) -&amp;gt; String {
+    b.repeat(a)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;fn: 定义声明关键字.&lt;br&gt;
+_fn: 函数名字&lt;br&gt;
+(a:usize, b:String): 函数参数&lt;br&gt;
+-&amp;gt; String: 返回值.&lt;br&gt;
+b.repeat(a): 不加符号;被当做返回值。 也可以return b.repeat(a)&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>rust - 所有权</title>
+      <link>https://tooooommy.github.io/post/rust-07-20200705/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tooooommy.github.io/post/rust-07-20200705/</guid>
+      
+        <description>&lt;h2 id=&#34;rule&#34;&gt;rule&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Rust中的每个值都有一个变量, 称为其所有者.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一次只能有一个所有者.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当所有者不在程序运行范围时, 该值将被删除.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;三条规则是所有权的基础.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ownership1&lt;/span&gt;() {
+    {
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; s &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;;
+        println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}&amp;#34;&lt;/span&gt;, s);
+    }
+    &lt;span style=&#34;color:#75715e&#34;&gt;// println!(&amp;#34;{}&amp;#34;, s);
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;s 出作用域被删除, 无法使用.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;stack-vs-heap&#34;&gt;stack vs heap&lt;/h2&gt;
+&lt;p&gt;在很多语言中，你并不需要经常考虑到栈与堆。不过在像 Rust 这样的系统编程语言中，值是位于栈上还是堆上在更大程度上影响了语言的行为以及为何必须做出这样的抉择。我们会在本章的稍后部分描述所有权与栈和堆相关的内容，所以这里只是一个用来预热的简要解释。&lt;/p&gt;
+&lt;p&gt;栈和堆都是代码在运行时可供使用的内存，但是它们的结构不同。栈以放入值的顺序存储值并以相反顺序取出值。这也被称作 后进先出（last in, first out）。想象一下一叠盘子：当增加更多盘子时，把它们放在盘子堆的顶部，当需要盘子时，也从顶部拿走。不能从中间也不能从底部增加或拿走盘子！增加数据叫做 进栈（pushing onto the stack），而移出数据叫做 出栈（popping off the stack）。&lt;/p&gt;
+&lt;p&gt;栈中的所有数据都必须占用已知且固定的大小。在编译时大小未知或大小可能变化的数据，要改为存储在堆上。堆是缺乏组织的：当向堆放入数据时，你要请求一定大小的空间。操作系统在堆的某处找到一块足够大的空位，把它标记为已使用，并返回一个表示该位置地址的 指针（pointer）。这个过程称作 在堆上分配内存（allocating on the heap），有时简称为 “分配”（allocating）。将数据推入栈中并不被认为是分配。因为指针的大小是已知并且固定的，你可以将指针存储在栈上，不过当需要实际数据时，必须访问指针。&lt;/p&gt;
+&lt;p&gt;想象一下去餐馆就座吃饭。当进入时，你说明有几个人，餐馆员工会找到一个够大的空桌子并领你们过去。如果有人来迟了，他们也可以通过询问来找到你们坐在哪。&lt;/p&gt;
+&lt;p&gt;入栈比在堆上分配内存要快，因为（入栈时）操作系统无需为存储新数据去搜索内存空间；其位置总是在栈顶。相比之下，在堆上分配内存则需要更多的工作，这是因为操作系统必须首先找到一块足够存放数据的内存空间，并接着做一些记录为下一次分配做准备。&lt;/p&gt;
+&lt;p&gt;访问堆上的数据比访问栈上的数据慢，因为必须通过指针来访问。现代处理器在内存中跳转越少就越快（缓存）。继续类比，假设有一个服务员在餐厅里处理多个桌子的点菜。在一个桌子报完所有菜后再移动到下一个桌子是最有效率的。从桌子 A 听一个菜，接着桌子 B 听一个菜，然后再桌子 A，然后再桌子 B 这样的流程会更加缓慢。出于同样原因，处理器在处理的数据彼此较近的时候（比如在栈上）比较远的时候（比如可能在堆上）能更好的工作。在堆上分配大量的空间也可能消耗时间。&lt;/p&gt;
+&lt;p&gt;当你的代码调用一个函数时，传递给函数的值（包括可能指向堆上数据的指针）和函数的局部变量被压入栈中。当函数结束时，这些值被移出栈。&lt;/p&gt;
+&lt;p&gt;跟踪哪部分代码正在使用堆上的哪些数据，最大限度的减少堆上的重复数据的数量，以及清理堆上不再使用的数据确保不会耗尽空间，这些问题正是所有权系统要处理的。一旦理解了所有权，你就不需要经常考虑栈和堆了，不过明白了所有权的存在就是为了管理堆数据，能够帮助解释为什么所有权要以这种方式工作。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;以上引用: &lt;a href=&#34;https://kaisery.github.io/trpl-zh-cn/ch04-01-what-is-ownership.html&#34;&gt;https://kaisery.github.io/trpl-zh-cn/ch04-01-what-is-ownership.html&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;move&#34;&gt;move&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;_move&lt;/span&gt;() {
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;a&amp;#34;&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; a;
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}&amp;#34;&lt;/span&gt;, b);
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}&amp;#34;&lt;/span&gt;, a);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; c  &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; String::from(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;c&amp;#34;&lt;/span&gt;);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; d &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; c;
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}&amp;#34;&lt;/span&gt;, c);
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}&amp;#34;&lt;/span&gt;, d);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;a/b: 指针赋值， a/b 都可以访问&lt;br&gt;
+c/d: 值转移， 所有权转移， c无法被访问，d可以被访问&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;clone&#34;&gt;clone&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;_clone&lt;/span&gt;() {
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; String::from(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;String&amp;#34;&lt;/span&gt;);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; a.clone();
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}&amp;#34;&lt;/span&gt;, a);
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}&amp;#34;&lt;/span&gt;, b);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;clone: 赋值一份资源，赋值给b. 所以a, b 都可以被访问.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;基本数据&amp;quot;类型的数据，不需要存储到堆中，仅在栈中的数据的&amp;quot;移动&amp;quot;方式是直接复制，这不会花费更长的时间或更多的存储空间。例如:&lt;br&gt;
+所有整数类型，比如 u32。&lt;br&gt;
+布尔类型，bool，它的值是 true 和 false。
+所有浮点数类型，比如 f64。&lt;br&gt;
+字符类型，char。&lt;br&gt;
+元组，当且仅当其包含的类型也都是 Copy 的时候。比如，(i32, i32) 是 Copy 的，但 (i32, String) 就不是。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;borrowing&#34;&gt;borrowing&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;_borrowing&lt;/span&gt;() {
+   &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; String::from(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;hello&amp;#34;&lt;/span&gt;);
+    &lt;span style=&#34;color:#75715e&#34;&gt;// _borrow_1(a);
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    _borrow_2(&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;a);
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}&amp;#34;&lt;/span&gt;, a);
+    &lt;span style=&#34;color:#75715e&#34;&gt;// _borrow_1(a);
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// println!(&amp;#34;{}&amp;#34;, a);
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;}
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;_borrow_1&lt;/span&gt;(a :String) {
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}&amp;#34;&lt;/span&gt;, a)
+}
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;_borrow_2&lt;/span&gt;(a :&lt;span style=&#34;color:#66d9ef&#34;&gt;&amp;amp;&lt;/span&gt;String) {
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}&amp;#34;&lt;/span&gt;, a)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;引用只能借用所有权，而不能获得所有权。第一个_borrow_1转移所有权, _borrow_2 借出所有权，会还回去.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>rust - 注释</title>
+      <link>https://tooooommy.github.io/post/rust-05-20200705/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tooooommy.github.io/post/rust-05-20200705/</guid>
+      
+        <description>&lt;h2 id=&#34;comment&#34;&gt;comment&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/// Adds one to the number given:
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;///
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/// # Examples
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;///
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/// ```
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/// let x = _comment(1, 2);
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;///
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/// ```
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;/*
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;@param a i32
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;@param b i32
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;@return a+b
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; */&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;_comment&lt;/span&gt;(a: &lt;span style=&#34;color:#66d9ef&#34;&gt;i32&lt;/span&gt;, b:&lt;span style=&#34;color:#66d9ef&#34;&gt;i32&lt;/span&gt;) -&amp;gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;i32&lt;/span&gt; {
+    &lt;span style=&#34;color:#75715e&#34;&gt;// a+b 并返回
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    a&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;b
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;// 单行注释&lt;br&gt;
+/**/ 多行注释&lt;br&gt;
+/// 文档注释 -&amp;gt; 可以配合cargo doc 进行文档输出&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>rust - 世界之初</title>
+      <link>https://tooooommy.github.io/post/rust-02-20200704/</link>
+      <pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tooooommy.github.io/post/rust-02-20200704/</guid>
+      
+        <description>&lt;h2 id=&#34;hello-world&#34;&gt;hello world&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{} world&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;hello&amp;#34;&lt;/span&gt;);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;fn: 声明函数.&lt;br&gt;
+println!: 宏, 打印输出 {} 代表占用符&lt;br&gt;
+main: 入口函数&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>rust - 控制流程</title>
+      <link>https://tooooommy.github.io/post/rust-06-20200705/</link>
+      <pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tooooommy.github.io/post/rust-06-20200705/</guid>
+      
+        <description>&lt;h2 id=&#34;if&#34;&gt;if&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;_if&lt;/span&gt;() {
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; a {
+        println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;a==true&amp;#34;&lt;/span&gt;)
+    } &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; b {
+        println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;b==true&amp;#34;&lt;/span&gt;)
+    } &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; {
+        println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;other==true&amp;#34;&lt;/span&gt;)
+    }
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; a {
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;
+    } &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; {
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+    };
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}&amp;#34;&lt;/span&gt;, a)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;if/else if/ else 判断&lt;br&gt;
+let if: 赋值判断&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;loop&#34;&gt;loop&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;_loop&lt;/span&gt;() {
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;mut&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;loop&lt;/span&gt; {
+        a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; a&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; {
+            println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}&amp;#34;&lt;/span&gt;, a);
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt;;
+        }
+    }
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;loop&lt;/span&gt; {
+        a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt; {
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt; a;
+        }
+    };
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}&amp;#34;&lt;/span&gt;, a);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;loop: 循环， 可用于无限循环&lt;br&gt;
+let loop: 赋值循环&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;while&#34;&gt;while&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;_while&lt;/span&gt;() {
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;mut&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; a&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; {
+        a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; a&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt; {
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt;;
+        }
+    }
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}&amp;#34;&lt;/span&gt;, a);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;while: 循环关键字, 不可赋值&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;for&#34;&gt;for&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;_for&lt;/span&gt; () {
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; a: [&lt;span style=&#34;color:#66d9ef&#34;&gt;i32&lt;/span&gt;; &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;];
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; v &lt;span style=&#34;color:#66d9ef&#34;&gt;in&lt;/span&gt; a.iter() {
+        println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}&amp;#34;&lt;/span&gt;, v);
+    }
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; v &lt;span style=&#34;color:#66d9ef&#34;&gt;in&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;..&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; {
+        println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}&amp;#34;&lt;/span&gt;, v)
+    }
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; v &lt;span style=&#34;color:#66d9ef&#34;&gt;in&lt;/span&gt; (&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;..&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;).rev() {
+        println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}&amp;#34;&lt;/span&gt;, v)
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;for: 循环&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;match&#34;&gt;match&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;_match&lt;/span&gt;() {
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;mut&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;match&lt;/span&gt; a {
+        &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;one&amp;#34;&lt;/span&gt;),
+        &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;two&amp;#34;&lt;/span&gt;),
+        &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;three&amp;#34;&lt;/span&gt;),
+        &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;four&amp;#34;&lt;/span&gt;),
+        &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;five&amp;#34;&lt;/span&gt;),
+        _ &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;default&amp;#34;&lt;/span&gt;),
+    }
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;match&lt;/span&gt; a {
+        &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,
+        &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,
+        &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,
+        &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;,
+        &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;,
+        _ &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+    };
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}&amp;#34;&lt;/span&gt;, b);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;match =&amp;gt;: 类似switch&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>rust - 类型</title>
+      <link>https://tooooommy.github.io/post/rust-03-20200704/</link>
+      <pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tooooommy.github.io/post/rust-03-20200704/</guid>
+      
+        <description>&lt;h2 id=&#34;let&#34;&gt;let&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;types&lt;/span&gt;() {
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;;
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}&amp;#34;&lt;/span&gt;, x);
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}&amp;#34;&lt;/span&gt;, y);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;let: 用于声明类型赋值&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;mut&#34;&gt;mut&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;_mut&lt;/span&gt;() {
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;mut&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;;
+    x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;;
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}&amp;#34;&lt;/span&gt;, x);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;;
+    &lt;span style=&#34;color:#75715e&#34;&gt;// y = 5;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}&amp;#34;&lt;/span&gt;, y)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;error: ^^^^^ cannot assign twice to immutable variable&lt;br&gt;
+mut: 代表这个变量的可变性，可再次赋值。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;int&#34;&gt;int&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;int&lt;/span&gt;() {
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; a1:&lt;span style=&#34;color:#66d9ef&#34;&gt;i8&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; a2: &lt;span style=&#34;color:#66d9ef&#34;&gt;u8&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}-{}&amp;#34;&lt;/span&gt;, a1, a2);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; b1:&lt;span style=&#34;color:#66d9ef&#34;&gt;i16&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; b2:&lt;span style=&#34;color:#66d9ef&#34;&gt;u16&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;;
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}-{}&amp;#34;&lt;/span&gt;, b1, b2);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; c1:&lt;span style=&#34;color:#66d9ef&#34;&gt;i32&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; c2:&lt;span style=&#34;color:#66d9ef&#34;&gt;u32&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;;
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}-{}&amp;#34;&lt;/span&gt;, c1, c2);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; d1:&lt;span style=&#34;color:#66d9ef&#34;&gt;i64&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; d2:&lt;span style=&#34;color:#66d9ef&#34;&gt;u64&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;;
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}-{}&amp;#34;&lt;/span&gt;, d1, d2);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; e1:&lt;span style=&#34;color:#a6e22e&#34;&gt;i128&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; e2:&lt;span style=&#34;color:#a6e22e&#34;&gt;i128&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;;
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}-{}&amp;#34;&lt;/span&gt;, e1, e2);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; e1:&lt;span style=&#34;color:#66d9ef&#34;&gt;isize&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; e2:&lt;span style=&#34;color:#66d9ef&#34;&gt;usize&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt;;
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}-{}&amp;#34;&lt;/span&gt;, e1, e2);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;(i/u)n: 8 16 32 64 128 代表该参数的储存包含从 -(2n - 1) 到 2n - 1 - 1 在内的数字.&lt;br&gt;
+isize/usize: 代表该size由计算机位数决定. 32位就是i32, 64位就是i64.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;hex&#34;&gt;hex&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;hex&lt;/span&gt;() {
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;98_222&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;// 十进制
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0xffff&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;// 十六进制
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; c &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0o77&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;// 八进制
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; d &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0b1111_0000&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;// 二进制
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; e  &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;b&amp;#39;a&amp;#39;&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;// byte字节
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}-{:x}-{:o}-{:b}-{:}&amp;#34;&lt;/span&gt;,a,b,c,d,e)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;_: 为了直观.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;float&#34;&gt;float&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;float&lt;/span&gt;() {
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;3.3&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; b:&lt;span style=&#34;color:#66d9ef&#34;&gt;f32&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;3.32&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; c:&lt;span style=&#34;color:#66d9ef&#34;&gt;f64&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;3.32&lt;/span&gt;;
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{:}-{}-{}&amp;#34;&lt;/span&gt;, a, b, c, );
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;f(n): 代表浮点数，n函数与int类似.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;operation&#34;&gt;operation&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;operation&lt;/span&gt;() {
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;95.3&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;3.3&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; c &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;  &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; d &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;43&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt;  e &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;43&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;;
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}-{}-{}-{}-{}&amp;#34;&lt;/span&gt;, a, b, c, d, e)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;数学运算- 加减乘除取模&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;bool&#34;&gt;bool&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;bool&lt;/span&gt;() {
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;;
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}-{}&amp;#34;&lt;/span&gt;, a, b);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;true/false: 布尔类型.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;char&#34;&gt;char&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;char&lt;/span&gt;() {
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; b  &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt;;
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}-{}&amp;#34;&lt;/span&gt;, a, b);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;tuple&#34;&gt;tuple&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;tuple&lt;/span&gt;() {
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; tup &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;,&lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; (x, y, z,b) &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; tup;
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}-{}-{}-{}&amp;#34;&lt;/span&gt;, x, y, z, b);
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}&amp;#34;&lt;/span&gt;, tup.&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;tuple: 元组, () = tuple 解构.&lt;br&gt;
+tuple.n: 访问第n个数值&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;array&#34;&gt;array&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;array&lt;/span&gt;() {
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt; ];
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; [x, y , z] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; a;
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}-{}-{}&amp;#34;&lt;/span&gt;, x, y, z);
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}&amp;#34;&lt;/span&gt;, a[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;array: 数组， [] = array 数组解构.&lt;br&gt;
+array[n]: 访问第n个数值&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;string&#34;&gt;String&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;_string&lt;/span&gt;() {
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; String::from(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;s&amp;#34;&lt;/span&gt;);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;;
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}-{}&amp;#34;&lt;/span&gt;, a, b);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; c &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;你好&amp;#34;&lt;/span&gt;;
+    println&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{}&amp;#34;&lt;/span&gt;, c);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;&amp;amp;str: 是字符串的引用.&lt;br&gt;
+String: 是基于堆创建的，可增长的字符串.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>学习rust</title>
+      <link>https://tooooommy.github.io/post/rust-01-20200704/</link>
+      <pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tooooommy.github.io/post/rust-01-20200704/</guid>
+      
+        <description>&lt;h2 id=&#34;为什么&#34;&gt;为什么&lt;/h2&gt;
+&lt;p&gt;从众心理， 想学就学。&lt;/p&gt;
+&lt;h2 id=&#34;目标&#34;&gt;目标&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 世界之初&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 类型&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 函数&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 注释&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 流程&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 所有权&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 切片&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 结构&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 特征&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 迭代&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 枚举&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 集合&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 错误&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 泛型&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 生命周期&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 测试&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 智能指针&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 模块&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 待续&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;努力不一定成功&lt;br&gt;
+不努力一定失败&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>侠客行</title>
-      <link>https://tooooommy.github.io/post/poem20200325/</link>
+      <link>https://tooooommy.github.io/post/poem-20200325/</link>
       <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tooooommy.github.io/post/poem20200325/</guid>
+      <guid>https://tooooommy.github.io/post/poem-20200325/</guid>
       
         <description>&lt;h2 id=&#34;侠客行---李白&#34;&gt;侠客行 - 李白&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;赵客缦胡缨， 吴钩霜雪明。
@@ -76,7 +644,7 @@
     </item>
     
     <item>
-      <title>linux 每天一个命令 sed</title>
+      <title>linux命令 sed</title>
       <link>https://tooooommy.github.io/post/sed-20200324/</link>
       <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
       
@@ -86,7 +654,7 @@
 &lt;p&gt;linux 每天一个命令 sed。&lt;/p&gt;
 &lt;p&gt;sed 命令是利用脚本来处理文本文件, 特别是行。&lt;/p&gt;
 &lt;h2 id=&#34;sed&#34;&gt;Sed&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;sed [-hnV][-e&amp;lt;script&amp;gt;][-f&amp;lt;script文件&amp;gt;][文本文件] &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sed [-hnV][-e&amp;lt;script&amp;gt;][-f&amp;lt;script文件&amp;gt;][文本文件]&lt;/code&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;参数&lt;/p&gt;
 &lt;ul&gt;
@@ -111,7 +679,7 @@
     </item>
     
     <item>
-      <title>Systemd</title>
+      <title>linux命令 Systemd</title>
       <link>https://tooooommy.github.io/post/systemd-20200322/</link>
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
       
@@ -129,9 +697,13 @@
 &lt;p&gt;loginctl 命令用于查看当前登录的用户&lt;/p&gt;
 &lt;p&gt;journalctl 查看所有内核和应用的日志&lt;/p&gt;
 &lt;h3 id=&#34;配置&#34;&gt;配置&lt;/h3&gt;
-&lt;p&gt;#系统服务，开机不需要登录就能运行的程序（可以用于开机自启）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;系统服务，开机不需要登录就能运行的程序（可以用于开机自启）&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;/usr/lib/systemd/system&lt;/p&gt;
-&lt;p&gt;#用户服务，需要登录后才能运行程序&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;用户服务，需要登录后才能运行程序&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;/usr/lib/systemd/user&lt;/p&gt;
 &lt;p&gt;服务脚本一般以xxx.service命名, 三部分[Unit] [Service] [Install]&lt;/p&gt;
 &lt;h3 id=&#34;案例&#34;&gt;案例&lt;/h3&gt;
@@ -169,16 +741,10 @@ wantedBy=multi-user.target
 &lt;p&gt;wantedBy 加入那个target&lt;/p&gt;
 &lt;h2 id=&#34;引用&#34;&gt;引用&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;http://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-commands.html&#34;&gt;@Systemd 入门教程：命令篇&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;http://www.ruanyifeng.com/blog/2016/02/linux-daemon.html&#34;&gt;@Linux 守护进程的启动方法&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;http://www.jinbuguo.com/systemd/systemd.service.html&#34;&gt;@systemd.service 中文手册&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/yuanfangPOET/article/details/89410312?depth_1-utm_source=distribute.pc_relevant.none-task&amp;amp;utm_source=distribute.pc_relevant.none-task&#34;&gt;@CentOS7编写systemd服务脚本&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-commands.html&#34;&gt;@Systemd 入门教程：命令篇&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://www.ruanyifeng.com/blog/2016/02/linux-daemon.html&#34;&gt;@Linux 守护进程的启动方法&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://www.jinbuguo.com/systemd/systemd.service.html&#34;&gt;@systemd.service 中文手册&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://blog.csdn.net/yuanfangPOET/article/details/89410312?depth_1-utm_source=distribute.pc_relevant.none-task&amp;amp;utm_source=distribute.pc_relevant.none-task&#34;&gt;@CentOS7编写systemd服务脚本&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
       
@@ -661,7 +1227,7 @@ $
 :wq
 
 $
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Hugo uses the Go template engine. That engine scans the template files for commands which are enclosed between &amp;ldquo;{{&amp;rdquo; and &amp;ldquo;}}&amp;quot;. In our template, the commands are:&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Hugo uses the Go template engine. That engine scans the template files for commands which are enclosed between &amp;ldquo;{{&amp;rdquo; and &amp;ldquo;}}&amp;rdquo;. In our template, the commands are:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;range&lt;/li&gt;
 &lt;li&gt;.Title&lt;/li&gt;
@@ -849,7 +1415,7 @@ i&#39;m speechless
 -rw-rw-r--  1 mdhender  staff   358 Sep 27 15:08 public/post/first-post/index.html
 -rw-rw-r--  1 mdhender  staff     0 Sep 27 15:08 public/post/index.html
 -rw-rw-r--  1 mdhender  staff   342 Sep 27 15:08 public/post/second-post/index.html
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Notice that the page wasn&amp;rsquo;t created at the top level. It was created in a sub-directory named &amp;lsquo;about-time/&#39;. That name came from our slug. Hugo will use the slug to name the generated content. It&amp;rsquo;s a reasonable default, by the way, but we can learn a few things by fighting it for this file.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Notice that the page wasn&amp;rsquo;t created at the top level. It was created in a sub-directory named &amp;lsquo;about-time/&amp;rsquo;. That name came from our slug. Hugo will use the slug to name the generated content. It&amp;rsquo;s a reasonable default, by the way, but we can learn a few things by fighting it for this file.&lt;/p&gt;
 &lt;p&gt;One other thing. Take a look at the home page.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;$ cat public/index.html
 &amp;lt;!DOCTYPE html&amp;gt;

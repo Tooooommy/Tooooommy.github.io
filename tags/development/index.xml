@@ -22,7 +22,7 @@
     </item>
     
     <item>
-      <title>linux 每天一个命令 sed</title>
+      <title>linux命令 sed</title>
       <link>https://tooooommy.github.io/post/sed-20200324/</link>
       <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
       
@@ -31,22 +31,12 @@
     </item>
     
     <item>
-      <title>Systemd</title>
+      <title>linux命令 Systemd</title>
       <link>https://tooooommy.github.io/post/systemd-20200322/</link>
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://tooooommy.github.io/post/systemd-20200322/</guid>
       <description>导言 守护进程就是一直在后台运行的进程。 Systemd Systemd 是linux系统工具，用来启动守护进程的。 systemctl 是Systemd的主命令，用于管理系统。 systemd-analyze 命令用于查看</description>
-    </item>
-    
-    <item>
-      <title>Creating a New Theme</title>
-      <link>https://tooooommy.github.io/post/creating-a-new-theme/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://tooooommy.github.io/post/creating-a-new-theme/</guid>
-      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
     </item>
     
   </channel>

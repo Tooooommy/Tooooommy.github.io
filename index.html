@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.66.0" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://tooooommy.github.io/" />
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Tooooommy&#39;s Blog" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://tooooommy.github.io/" />
-<meta property="og:updated_time" content="2020-03-25T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-07-06T00:00:00+00:00" />
 <meta itemprop="name" content="Tooooommy&#39;s blog">
 <meta itemprop="description" content="Tooooommy&#39;s Blog"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Tooooommy&#39;s blog"/>
@@ -277,15 +277,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/poem20200325/">侠客行</a>
+      <a class="post-link" href="/post/rust-08-20200706/">rust - 切片</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-03-25" class="post-time">
-        2020-03-25
+      <time datetime="2020-07-06" class="post-time">
+        2020-07-06
       </time>
       <div class="post-category">
-          <a href="https://tooooommy.github.io/categories/poem/"> Poem </a>
+          <a href="https://tooooommy.github.io/categories/rust/"> Rust </a>
           
         </div>
       
@@ -297,10 +297,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      侠客行 - 李白 赵客缦胡缨， 吴钩霜雪明。 银鞍照白马， 飒沓如流星。 十步杀一人， 千里不留行。 事了拂衣去， 深藏功与名。 闲过信陵饮， 脱剑膝前横。 将炙啖朱
+      slice fn _slice() { let s = String::from(&#34;string&#34;); let p1 = &amp;s[0..4]; let p2 = &amp;s[4..s.len()]; println!(&#34;{}-{}-{}&#34;, s, p1, p2); let a: [i32; 3] = [1, 2, 3]; let a1 = &amp;a[1..3]; println!(&#34;{}&#34;, a1[0]); } slice: s[n..M] n/m 可以忽略代表全部, 不可超出s的长度.
     </div>
     <div class="read-more">
-      <a href="/post/poem20200325/" class="read-more-link">Read more</a>
+      <a href="/post/rust-08-20200706/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -311,16 +311,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/imlink-20200324/">im 学习和收集</a>
+      <a class="post-link" href="/post/rust-09-20200706/">rust - 结构</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-03-24" class="post-time">
-        2020-03-24
+      <time datetime="2020-07-06" class="post-time">
+        2020-07-06
       </time>
       <div class="post-category">
-          <a href="https://tooooommy.github.io/categories/development/"> Development </a>
-          <a href="https://tooooommy.github.io/categories/im/"> IM </a>
+          <a href="https://tooooommy.github.io/categories/rust/"> Rust </a>
           
         </div>
       
@@ -332,10 +331,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      im概括 新手入门一篇就够：从零开发移动端IM 序列号 去重 离线 心跳 IM消息ID技术专题(三)：解密融云IM产品的聊天消息ID生成策略 分布式唯一i
+      struct fn _struct() { struct People { // 定义struct name: String, age: i64 } let p1 = People{ // 声明赋值struct name: String::from(&#34;hello&#34;), age: 18 }; println!(&#34;{}-{}&#34;, p1.name, p1.age); // 访问struct let name = String::from(&#34;world&#34;); let p2 = People{ name, // 现有字段赋值 ..p1
     </div>
     <div class="read-more">
-      <a href="/post/imlink-20200324/" class="read-more-link">Read more</a>
+      <a href="/post/rust-09-20200706/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -346,16 +345,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/sed-20200324/">linux 每天一个命令 sed</a>
+      <a class="post-link" href="/post/rust-04-20200705/">rust - 函数</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-03-24" class="post-time">
-        2020-03-24
+      <time datetime="2020-07-05" class="post-time">
+        2020-07-05
       </time>
       <div class="post-category">
-          <a href="https://tooooommy.github.io/categories/development/"> Development </a>
-          <a href="https://tooooommy.github.io/categories/linux/"> Linux </a>
+          <a href="https://tooooommy.github.io/categories/rust/"> Rust </a>
           
         </div>
       
@@ -367,10 +365,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      导言 linux 每天一个命令 sed。 sed 命令是利用脚本来处理文本文件, 特别是行。 Sed sed [-hnV][-e&lt;script&gt;][-f&lt;scr
+      fn fn _fn(a: usize, b:String) -&gt; String { b.repeat(a) } fn: 定义声明关键字. _fn: 函数名字 (a:usize, b:String): 函数参数 -&gt; String: 返回值. b.repeat(a): 不加符号;被当做返回值。 也可以return b.repeat(a)
     </div>
     <div class="read-more">
-      <a href="/post/sed-20200324/" class="read-more-link">Read more</a>
+      <a href="/post/rust-04-20200705/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -381,16 +379,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/systemd-20200322/">Systemd</a>
+      <a class="post-link" href="/post/rust-07-20200705/">rust - 所有权</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-03-22" class="post-time">
-        2020-03-22
+      <time datetime="2020-07-05" class="post-time">
+        2020-07-05
       </time>
       <div class="post-category">
-          <a href="https://tooooommy.github.io/categories/development/"> Development </a>
-          <a href="https://tooooommy.github.io/categories/linux/"> Linux </a>
+          <a href="https://tooooommy.github.io/categories/rust/"> Rust </a>
           
         </div>
       
@@ -402,10 +399,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      导言 守护进程就是一直在后台运行的进程。 Systemd Systemd 是linux系统工具，用来启动守护进程的。 systemctl 是Systemd的主命令，用于管理系统。 systemd-analyze 命令用于查看
+      rule Rust中的每个值都有一个变量, 称为其所有者. 一次只能有一个所有者. 当所有者不在程序运行范围时, 该值将被删除. 三条规则是所有权的基础. fn ownership1()
     </div>
     <div class="read-more">
-      <a href="/post/systemd-20200322/" class="read-more-link">Read more</a>
+      <a href="/post/rust-07-20200705/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -416,17 +413,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/creating-a-new-theme/">Creating a New Theme</a>
+      <a class="post-link" href="/post/rust-05-20200705/">rust - 注释</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2014-09-28" class="post-time">
-        2014-09-28
+      <time datetime="2020-07-05" class="post-time">
+        2020-07-05
       </time>
       <div class="post-category">
-          <a href="https://tooooommy.github.io/categories/development/"> Development </a>
-          <a href="https://tooooommy.github.io/categories/golang/"> golang </a>
-          <a href="https://tooooommy.github.io/categories/index/"> index </a>
+          <a href="https://tooooommy.github.io/categories/rust/"> Rust </a>
           
         </div>
       
@@ -438,11 +433,44 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&rsquo;t cover using CSS to style your theme.
-We&rsquo;ll start with creating a new site with a very basic template.
+      comment /// Adds one to the number given: /// /// # Examples /// /// ``` /// let x = _comment(1, 2); /// /// ``` /* @param a i32 @param b i32 @return a+b */ fn _comment(a: i32, b:i32) -&gt;i32 { // a+b 并返回 a+b } // 单行注释 /**/ 多行注释 /// 文档注释 -&gt; 可以配合car
     </div>
     <div class="read-more">
-      <a href="/post/creating-a-new-theme/" class="read-more-link">Read more</a>
+      <a href="/post/rust-05-20200705/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/rust-02-20200704/">rust - 世界之初</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-04" class="post-time">
+        2020-07-04
+      </time>
+      <div class="post-category">
+          <a href="https://tooooommy.github.io/categories/rust/"> Rust </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      hello world fn main() { println!(&#34;{} world&#34;, &#34;hello&#34;); } fn: 声明函数. println!: 宏, 打印输出 {} 代表占用符 main: 入口函数
+    </div>
+    <div class="read-more">
+      <a href="/post/rust-02-20200704/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -468,6 +496,26 @@ We&rsquo;ll start with creating a new site with a very basic template.
 
   
   
+
+  
+  
+  <nav class="pagination">
+    <ul>
+      
+      <li  class="active" >
+        <a href="/">1</a>
+      </li>
+      
+      <li >
+        <a href="/page/2/">2</a>
+      </li>
+      
+      <li >
+        <a href="/page/3/">3</a>
+      </li>
+      
+    </ul>
+  </nav>
 
   
   
