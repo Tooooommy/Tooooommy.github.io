@@ -62,7 +62,7 @@
 <meta property="og:description" content="Tooooommy&#39;s Blog" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://tooooommy.github.io/" />
-<meta property="og:updated_time" content="2020-07-06T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-07-07T00:00:00+00:00" />
 <meta itemprop="name" content="Tooooommy&#39;s blog">
 <meta itemprop="description" content="Tooooommy&#39;s Blog"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Tooooommy&#39;s blog"/>
@@ -277,6 +277,74 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/rust-10-20200707/">rust - 枚举</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-07" class="post-time">
+        2020-07-07
+      </time>
+      <div class="post-category">
+          <a href="https://tooooommy.github.io/categories/rust/"> Rust </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      enum fn _enum() { #[derive(Debug)] enum Color { // enum: 枚举声明, 类似结构体，White(u32) 字段。 可以设置为 enum Color { White, Black, Yellow, } White(u32), Black(String), Yellow(char) } let white = Color::White(1); // 赋值 println!(&#34;{:#?}&#34;, white); let black = Color::Black(String::from(&#34;black&#34;)); println!(&#34;{:#?}&#34;, black); match black { // match
+    </div>
+    <div class="read-more">
+      <a href="/post/rust-10-20200707/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/rust-11-20200707/">rust - 特征</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-07" class="post-time">
+        2020-07-07
+      </time>
+      <div class="post-category">
+          <a href="https://tooooommy.github.io/categories/rust/"> Rust </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      trait trait Descriptive { // 定义 trait , 函数集 fn describe(&amp;self) -&gt; String; } struct Person { // 结构体 name: String, age: u8 } impl Descriptive for Person { // 结构体实现trait， 实现里面的函数集 fn describe(&amp;self) -&gt;String { format!(&#34;{} {}&#34;, self.name, self.age) } } fn _trait () { let tommy
+    </div>
+    <div class="read-more">
+      <a href="/post/rust-11-20200707/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/rust-08-20200706/">rust - 切片</a>
     </h1>
     
@@ -403,74 +471,6 @@
     </div>
     <div class="read-more">
       <a href="/post/rust-07-20200705/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/rust-05-20200705/">rust - 注释</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-07-05" class="post-time">
-        2020-07-05
-      </time>
-      <div class="post-category">
-          <a href="https://tooooommy.github.io/categories/rust/"> Rust </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      comment /// Adds one to the number given: /// /// # Examples /// /// ``` /// let x = _comment(1, 2); /// /// ``` /* @param a i32 @param b i32 @return a+b */ fn _comment(a: i32, b:i32) -&gt;i32 { // a+b 并返回 a+b } // 单行注释 /**/ 多行注释 /// 文档注释 -&gt; 可以配合car
-    </div>
-    <div class="read-more">
-      <a href="/post/rust-05-20200705/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/rust-02-20200704/">rust - 世界之初</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-07-04" class="post-time">
-        2020-07-04
-      </time>
-      <div class="post-category">
-          <a href="https://tooooommy.github.io/categories/rust/"> Rust </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      hello world fn main() { println!(&#34;{} world&#34;, &#34;hello&#34;); } fn: 声明函数. println!: 宏, 打印输出 {} 代表占用符 main: 入口函数
-    </div>
-    <div class="read-more">
-      <a href="/post/rust-02-20200704/" class="read-more-link">Read more</a>
     </div>
     
   </div>

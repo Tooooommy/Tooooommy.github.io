@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>@Tooooommy</copyright>
-    <lastBuildDate>Mon, 06 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tooooommy.github.io/categories/rust/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>rust - 枚举</title>
+      <link>https://tooooommy.github.io/post/rust-10-20200707/</link>
+      <pubDate>Tue, 07 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tooooommy.github.io/post/rust-10-20200707/</guid>
+      <description>enum fn _enum() { #[derive(Debug)] enum Color { // enum: 枚举声明, 类似结构体，White(u32) 字段。 可以设置为 enum Color { White, Black, Yellow, } White(u32), Black(String), Yellow(char) } let white = Color::White(1); // 赋值 println!(&amp;#34;{:#?}&amp;#34;, white); let black = Color::Black(String::from(&amp;#34;black&amp;#34;)); println!(&amp;#34;{:#?}&amp;#34;, black); match black { // match</description>
+    </item>
+    
+    <item>
+      <title>rust - 特征</title>
+      <link>https://tooooommy.github.io/post/rust-11-20200707/</link>
+      <pubDate>Tue, 07 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tooooommy.github.io/post/rust-11-20200707/</guid>
+      <description>trait trait Descriptive { // 定义 trait , 函数集 fn describe(&amp;amp;self) -&amp;gt; String; } struct Person { // 结构体 name: String, age: u8 } impl Descriptive for Person { // 结构体实现trait， 实现里面的函数集 fn describe(&amp;amp;self) -&amp;gt;String { format!(&amp;#34;{} {}&amp;#34;, self.name, self.age) } } fn _trait () { let tommy</description>
+    </item>
     
     <item>
       <title>rust - 切片</title>

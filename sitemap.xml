@@ -3,28 +3,56 @@
   
   <url>
     <loc>https://tooooommy.github.io/categories/</loc>
-    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://tooooommy.github.io/post/</loc>
-    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://tooooommy.github.io/categories/rust/</loc>
-    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://tooooommy.github.io/tags/rust/</loc>
-    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tooooommy.github.io/post/rust-10-20200707/</loc>
+    <lastmod>2020-07-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tooooommy.github.io/post/rust-11-20200707/</loc>
+    <lastmod>2020-07-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tooooommy.github.io/tags/</loc>
+    <lastmod>2020-07-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tooooommy.github.io/</loc>
+    <lastmod>2020-07-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -38,20 +66,6 @@
   
   <url>
     <loc>https://tooooommy.github.io/post/rust-09-20200706/</loc>
-    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://tooooommy.github.io/tags/</loc>
-    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://tooooommy.github.io/</loc>
     <lastmod>2020-07-06T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
